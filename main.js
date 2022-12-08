@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var Staff_1 = require("./src/Staff");
+var StaffManager_1 = require("./src/StaffManager");
+var staff1 = new Staff_1["default"]('hungcoi', 'hungcoi@gmail.com', '1234');
+var staff2 = new Staff_1["default"]('ngocanh', 'ngocanh@gmail.com', '3456');
+var staffManager = new StaffManager_1["default"]();
+staffManager.add(staff1);
+staffManager.add(staff2);
+console.log(Staff_1["default"].companyName);
+console.table(staffManager.checkAccount('luan@gmail.com', '1234'));
